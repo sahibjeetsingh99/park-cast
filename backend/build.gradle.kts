@@ -15,6 +15,9 @@ java {
 	}
 }
 
+springBoot {
+	mainClass.set("com.parkcast.ParkCastApplicationKt")
+}
 repositories {
 	mavenCentral()
 }
@@ -41,6 +44,13 @@ allOpen {
 	annotation("jakarta.persistence.Entity")
 	annotation("jakarta.persistence.MappedSuperclass")
 	annotation("jakarta.persistence.Embeddable")
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+	compilerOptions {
+		freeCompilerArgs.add("-Xjsr305=strict")
+		jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+	}
 }
 
 tasks.withType<Test> {
