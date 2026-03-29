@@ -22,7 +22,7 @@ CREATE TABLE users(
 
  CREATE TABLE bookings(
     id SERIAL PRIMARY KEY,
-    showtime_id INTEGER REFERENCES showtimes(id),
+    showtime_id INTEGER REFERENCES showtime(id),
     user_id INTEGER REFERENCES users(id),
     seats INTEGER NOT NULL,
     created_at TIMESTAMP DEFAULT NOW()
