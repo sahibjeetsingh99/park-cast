@@ -16,6 +16,9 @@ data class Showtime(
     val theatre: Theatre = Theatre(),
 
     @Column(nullable = false)
+    val movieName: String = "",
+
+    @Column(nullable = false)
     val startTime: LocalDateTime = LocalDateTime.now(),
 
     @Column(nullable = false)
