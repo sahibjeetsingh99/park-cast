@@ -1,4 +1,4 @@
-package com.example.park_cast.ui.theme
+package com.parkcast.android.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

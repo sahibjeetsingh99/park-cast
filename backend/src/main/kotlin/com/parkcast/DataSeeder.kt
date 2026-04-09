@@ -36,7 +36,7 @@ class DataSeeder(
             Theatre(
                 name = "Cineplex Vaughan",
                 address = "3555 Highway 7 West, Vaughan, ON",
-                lotCapacity = 500
+                lotCapacity = 150
             )
         )
 
