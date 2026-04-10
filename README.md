@@ -2,6 +2,8 @@
 
 A parking prediction app for moviegoers. ParkCast estimates how full a theatre's parking lot will be based on ticket sales, and sends push notifications to help you plan your arrival time.
 
+<img width="307" height="682" alt="image" src="https://github.com/user-attachments/assets/1e187267-562a-443a-a3a0-0c2a1af928ae" />
+
 ## How It Works
 
 1. Theatre ticket sales are tracked in the database as bookings
@@ -100,6 +102,9 @@ On first launch it fetches a real FCM token and registers it with the backend.
 ## Push Notifications
 
 Notifications are sent automatically every 5 minutes for showtimes starting in ~90 minutes when parking status is BUSY or FULL.
+
+<img width="310" height="685" alt="image" src="https://github.com/user-attachments/assets/0919c301-3628-4860-9a80-c5a799670623" />
+
 
 To trigger a test notification manually:
 ```bash
