@@ -16,6 +16,8 @@ data class Showtime(
     val theatre: Theatre
 )
 
+data class FcmTokenRequest(val email: String, val token: String)
+
 data class ParkingPrediction(
     val showtimeId: Int,
     val movieName: String,

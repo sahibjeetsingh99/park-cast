@@ -1,0 +1,30 @@
+{
+    "project_info": {
+      "project_number": "406779971024",
+      "project_id": "parkcast-8de60",
+      "storage_bucket": "parkcast-8de60.firebasestorage.app"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:406779971024:android:a150adf22ba3f59145e5d5",
+          "android_client_info": {
+            "package_name": "com.parkcast.android"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCE3vVDH0XW1OrZ6x3nVbzkQF5M6W2RlDw"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
+  
