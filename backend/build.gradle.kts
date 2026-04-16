@@ -46,8 +46,13 @@ allOpen {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 	compilerOptions {
 		freeCompilerArgs.add("-Xjsr305=strict")
-		jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+		jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
 	}
+}
+
+tasks.withType<JavaCompile> {
+	sourceCompatibility = JavaVersion.VERSION_21.toString()
+	targetCompatibility = JavaVersion.VERSION_21.toString()
 }
 
 tasks.withType<Test> {
