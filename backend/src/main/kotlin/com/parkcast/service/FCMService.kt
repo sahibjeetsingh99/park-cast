@@ -9,6 +9,7 @@ import com.google.firebase.messaging.Message
 import com.google.firebase.messaging.Notification
 import jakarta.annotation.PostConstruct
 import org.springframework.stereotype.Service
+import java.io.ByteArrayInputStream
 import java.io.FileInputStream
 
 @Service
@@ -16,11 +17,16 @@ class FCMService {
 
     @PostConstruct
     fun initialize() {
-        val serviceAccount = FileInputStream(
-            "src/main/resources/firebase-service-account.json"
+        // On Railway: set FIREBASE_SERVICE_ACCOUNT env var to the full JSON content
+        // Locally: falls back to reading the file
+        val credentials = System.getenv("FIREBASE_SERVICE_ACCOUNT")?.let { json ->
+            GoogleCredentials.fromStream(ByteArrayInputStream(json.toByteArray()))
+        } ?: GoogleCredentials.fromStream(
+            FileInputStream("src/main/resources/firebase-service-account.json")
         )
+
         val options = FirebaseOptions.builder()
-            .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+            .setCredentials(credentials)
             .build()
 
         if (FirebaseApp.getApps().isEmpty()) {

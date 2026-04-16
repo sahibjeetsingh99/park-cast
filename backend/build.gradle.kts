@@ -9,11 +9,6 @@ plugins {
 group = "com.parkcast"
 version = "0.0.1-SNAPSHOT"
 
-java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
-	}
-}
 
 springBoot {
 	mainClass.set("com.parkcast.ParkCastApplicationKt")
